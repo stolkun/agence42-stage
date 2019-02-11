@@ -52,6 +52,7 @@ html{
 }
 
 .header{
+    position: relative;
     height: 50vh;
     width: 100%;
     background-image: url("./../img/travail.jpg");
@@ -59,10 +60,140 @@ html{
     background-repeat: no-repeat;
 }
 
-.header__title{
+.filter{
     height: 100%;
     width: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.header__title{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.contact{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.2rem;
+    z-index: 1;
+    color: teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100px;
+}
+
+.contact__title{
+    font-family: Lato;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact__liste{
+    font-size: 1.5rem;
+    background-color: teal;
+    border-radius: 2rem;
+    padding: 5px;
+}
+
+.contact__liste > li{
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s all ease-out;
+}
+
+.contact__liste > li:hover{
+    transform: rotateZ(60deg);
+    background-color: teal;
+    color: white;
+}
+
+.contact__liste > li:nth-child(2){
+    margin: 5px 0px;
+}
+
+.container{
+    background-color: white;
+}
+
+.container__title{
+    font-size: 3rem;
+    color: rgb(26, 26, 26);
+    padding: 20px 0px;
+}
+
+.container__paraph{
+    font-size: 1.5rem;
+    font-family: Lato;
+    padding: 10px 10vw;
+    text-align: justify;
+}
+
+.container__compétences{
+    font-size: 1.5rem;
+    font-family: Lato;
+    padding: 10px 10vw;
+    text-align: justify;
+    list-style-type: circle;
+}
+
+.blank{
+    height: 50vh;
+    opacity: 0;
+}
+
+.footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    z-index: -1;
+    background-color: rgb(27, 27, 27);
+    height: 50vh;
+}
+
+.footer__title{
+    color: white;
+    font-size: 2rem;
+    height: 100%;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Lato;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.2rem;
+    text-align: center;
+}
+
+.number{
+    display: none;
+    color: white;
+    font-family: Lato;
+    font-size: 1.2rem;
+}
+
+.number--actif{
+    display: block;
+    position: fixed;
+    right: 100px;
+    background-color: teal;
+    border-radius: 1.2rem;
+    padding: 0.2rem;
 }
